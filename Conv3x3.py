@@ -15,6 +15,12 @@ class conv3x3:
                 yield i, j, image
 
     def feedForwards(self, input):
-        
+        h, w = input.shape
+        output = np.zeros(h-2, w-2)
+        for i, j, image in self.getRegions(input):
+            output[i, j] = np.sum(image*self.filters(), axis=(1, 2))
+        return output
+    
+    
 
     
