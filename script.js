@@ -20,4 +20,20 @@ function createGrid() {
 
 }
 
+function draw(e) {
+    square = e.currentTarget;
+    let id = square.id;
+    id = square.id.split(',');
+    for(let i = 0; i<2; i++){
+        for(let j = 0; j<2; j++){
+            a = i+Number(id[0]);
+            b = j+Number(id[1]);
+            if(a<=28 && b<=28){
+                square = document.getElementById("${a},${b}");
+                square.style.color = "black";
+            }
+        }
+    }
+}
+
 createGrid();
