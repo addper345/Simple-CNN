@@ -1,10 +1,10 @@
 let hold = false;
 
 function createGrid() {
-    if(document.getElementById('container') == null){
-        container = document.createElement('div');
-        document.getElementsByTagName('body').appendChild(container);
-    }
+    // if(document.getElementById('container') == null){
+    //     container = document.createElement('div');
+    //     document.getElementsByTagName('body').appendChild(container);
+    // }
     for(let i = 1; i<=28; i++){
         container = document.getElementById("container");
         container.addEventListener("mousedown", ()=> {
@@ -54,4 +54,10 @@ function draw(e) {
     }
 }
 
+
 createGrid();
+
+let button = document.querySelector("button");
+
+
+button.addEventListener("onclick");

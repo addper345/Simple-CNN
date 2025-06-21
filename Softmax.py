@@ -7,6 +7,7 @@ class Softmax:
         self.biases = np.zeros(nodes)
 
     def forward(self, input):
+        #input.shape = (13,13,8)
         self.last_input_shape = input.shape
         input = input.flatten()
         self.last_input = input

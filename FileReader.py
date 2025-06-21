@@ -15,7 +15,8 @@ def readMNIST(amount):
             label = int.from_bytes(label, byteorder='big')
             image = []
             for j in range(784):
-                image.append(images.read(1))
+                number = int.from_bytes(images.read(1), byteorder='big')
+                image.append(number)
             image = np.array(image)
             image = image.reshape((28,28))
             yield i, label, image
